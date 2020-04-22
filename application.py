@@ -7,7 +7,7 @@ def index():
     return render_template("index.html")
 @app.route("/<string:name>")
 def greeting(name):
-    return f"<h1> Hello {name}!</h1>"
+    return render_template("greeting.html", name=name)
 
 if __name__ == "__main__":
     app.run()
